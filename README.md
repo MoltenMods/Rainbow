@@ -5,7 +5,7 @@ An Among Us mod to add extra colours.
 ![Rainbow Player](images/RainbowColor.gif)
 
 # Table of Contents
-- [Hall Of Fame]()
+- [Hall Of Fame](#hall-of-fame-)
 - [Features](#features)
 - [Installation](#installation)
 
