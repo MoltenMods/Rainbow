@@ -72,31 +72,4 @@ namespace Rainbow
             ColorSelectionPatches.CustomColors.Add(customColor);
         }
     }
-    
-    // ==============================
-    // REMEMBER TO REMOVE THIS CODE
-    // DO NOT KEEP THIS CODE
-    // THIS IS NOT RAINBOW CODE
-    // UNDER NO CIRCUMSTANCES SHOULD YOU SHIP THIS CODE
-    // ==============================
-    [HarmonyPatch(typeof(SaveManager), nameof(SaveManager.GetPurchase))]
-    public static class EveryPurchasePatch
-    {
-        public static bool Prefix(ref bool __result)
-        {
-            __result = true;
-            return false;
-        }
-    }
-
-    [HarmonyPatch(typeof(PrivacyPolicyScreen), nameof(PrivacyPolicyScreen.Show))]
-    public static class StopPrivacyPolicyScreenShowingEveryTimeForNoReasonDespiteMeAcceptingItOneMillionTimesPatch
-    {
-        // It seems that the game resets `SaveManager.AcceptedPrivacyPolicy` every time you launch it, so this code
-        // ensures it's set to 1 (true) just before the game checks to see if it needs to show the popup.
-        public static void Prefix()
-        {
-            SaveManager.AcceptedPrivacyPolicy = 1;
-        }
-    }
 }
