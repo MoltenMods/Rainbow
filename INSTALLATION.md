@@ -20,8 +20,13 @@ library then selecting `Manage > Browse local files`.
       </tr>
    </thead>
    <tbody>
-      <td>1.0.0</td>
-      <td><a href="https://github.com/NuclearPowered/BepInEx/releases/tag/6.0.0-reactor.18%2Bstructfix">6.0.0-reactor.18+structfix</a></td>
+      <tr>
+         <td>0.1.1</td>
+         <td rowspan="2"><a href="https://github.com/NuclearPowered/BepInEx/releases/tag/6.0.0-reactor.18%2Bstructfix">6.0.0-reactor.18+structfix</a></td>
+      </tr>
+      <tr>
+         <td>0.1.0</td>
+      </tr>
    </tbody>
 </table>
 
@@ -84,9 +89,14 @@ library then selecting `Manage > Browse local files`.
       </tr>
    </thead>
    <tbody>
-      <td>0.1.0</td>
-      <td><a href="https://github.com/DaemonBeast/Reactor/releases/tag/0.6.0">0.6.0</a></td>
-   </tbody>
+      <tr>
+         <td>0.1.1</td>
+         <td rowspan="2"><a href="https://github.com/DaemonBeast/Reactor/releases/tag/0.6.0">0.6.0</a></td>
+      </tr>
+      <tr>
+         <td>0.1.0</td>
+      </tr>
+</tbody>
 </table>
 
 1. Download Reactor from the appropriate page in the above table.

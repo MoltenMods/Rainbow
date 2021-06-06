@@ -50,9 +50,14 @@ An Among Us mod to add extra colours.
       </tr>
    </thead>
    <tbody>
-      <td>0.1.0</td>
-      <td>2021.5.10-2021.5.25.2</td>
-      <td><a href="https://github.com/NuclearPowered/BepInEx/releases/tag/6.0.0-reactor.18%2Bstructfix">6.0.0-reactor.18+structfix</a></td>
-      <td><a href="https://github.com/DaemonBeast/Reactor/releases/tag/0.6.0">0.6.0</a></td>
-   </tbody>
+      <tr>
+        <td>0.1.1</td>
+        <td rowspan="2">2021.5.10-2021.5.25.2</td>
+        <td rowspan="2"><a href="https://github.com/NuclearPowered/BepInEx/releases/tag/6.0.0-reactor.18%2Bstructfix">6.0.0-reactor.18+structfix</a></td>
+        <td rowspan="2"><a href="https://github.com/DaemonBeast/Reactor/releases/tag/0.6.0">0.6.0</a></td>
+      </tr>
+      <tr>
+        <td>0.1.0</td>
+      </tr>
+  </tbody>
 </table>
