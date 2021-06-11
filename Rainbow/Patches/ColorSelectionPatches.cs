@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using HarmonyLib;
 using Rainbow.Extensions;
@@ -34,21 +34,30 @@ namespace Rainbow.Patches
                 new NormalColor(new Color32(241, 195, 209, Byte.MaxValue), 
                     new Color32(225, 155, 177, Byte.MaxValue), 
                     "Rose", "ROSE"),
-                new NormalColor(new Color32(119, 31, 31, Byte.MaxValue), 
-                    new Color32(94, 22, 22, Byte.MaxValue),
-                    "Maroon", "MARN"),
+                new NormalColor(new Color32(176, 48, 96, Byte.MaxValue),
+                    new Color32(112, 29, 60, Byte.MaxValue),
+                    "Light Maroon", "LTMRN"),
                 new NormalColor(new Color32(218, 165, 32, Byte.MaxValue), 
                     new Color32(156, 117, 22, Byte.MaxValue), 
                     "Gold", "GOLD"),
-                new NormalColor(new Color32(168, 255, 195, Byte.MaxValue), 
+                new NormalColor(new Color32(168, Byte.MaxValue, 195, Byte.MaxValue), 
                     new Color32(123, 186, 143, Byte.MaxValue), 
                     "Mint", "MINT"),
                 new NormalColor(new Color32(201, 146, 224, Byte.MaxValue), 
                     new Color32(156, 113, 173, Byte.MaxValue), 
                     "Lavender", "LVDR"),
+                new NormalColor(new Color32(102, 35, 60, Byte.MaxValue),
+                    new Color32(63, 9, 25, Byte.MaxValue),
+                    "Maroon", "MARN"),
                 new NormalColor(new Color32(144, 133, 116, Byte.MaxValue),
                     new Color32(82, 66, 59, Byte.MaxValue),
                     "Tan", "TAN"),
+                new NormalColor(new Color32(254, Byte.MaxValue, 188, Byte.MaxValue),
+                    new Color32(204, 190, 138, Byte.MaxValue),
+                    "Banana", "BNNA"),
+                new NormalColor(new Color32(218, 116, 119, Byte.MaxValue),
+                    new Color32(171, 75, 99, Byte.MaxValue),
+                    "Coral", "CORL"),
                 new CyclicColor(new[]
                 {
                     // 0.99f is used instead of 1f, because HSV(0, a, b) is apparently the same as HSV(1, a, b), which
