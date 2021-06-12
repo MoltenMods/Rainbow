@@ -52,12 +52,9 @@ namespace Rainbow.Patches
                 new NormalColor(new Color32(144, 133, 116, Byte.MaxValue),
                     new Color32(82, 66, 59, Byte.MaxValue),
                     "Tan", "TAN"),
-                new NormalColor(new Color32(254, Byte.MaxValue, 188, Byte.MaxValue),
+                new NormalColor(new Color32(254, 255, 188, Byte.MaxValue),
                     new Color32(204, 190, 138, Byte.MaxValue),
                     "Banana", "BNNA"),
-                new NormalColor(new Color32(218, 116, 119, Byte.MaxValue),
-                    new Color32(171, 75, 99, Byte.MaxValue),
-                    "Coral", "CORL"),
                 new CyclicColor(new[]
                 {
                     // 0.99f is used instead of 1f, because HSV(0, a, b) is apparently the same as HSV(1, a, b), which
