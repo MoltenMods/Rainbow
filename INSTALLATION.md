@@ -21,6 +21,10 @@ library then selecting `Manage > Browse local files`.
    </thead>
    <tbody>
       <tr>
+         <td>0.2.0</td>
+         <td><a href="https://github.com/NuclearPowered/BepInEx/releases/tag/6.0.0-reactor.23">6.0.0-reactor.23</a></td>
+      </tr>
+      <tr>
          <td>0.1.1</td>
          <td rowspan="2"><a href="https://github.com/NuclearPowered/BepInEx/releases/tag/6.0.0-reactor.18%2Bstructfix">6.0.0-reactor.18+structfix</a></td>
       </tr>
@@ -89,6 +93,10 @@ library then selecting `Manage > Browse local files`.
       </tr>
    </thead>
    <tbody>
+      <tr>
+         <td>0.2.0</td>
+         <td><a href="https://github.com/NuclearPowered/Reactor/actions/runs/946101529">1.0.0-ci.68</a></td>
+      </tr>
       <tr>
          <td>0.1.1</td>
          <td rowspan="2"><a href="https://github.com/DaemonBeast/Reactor/releases/tag/0.6.0">0.6.0</a></td>

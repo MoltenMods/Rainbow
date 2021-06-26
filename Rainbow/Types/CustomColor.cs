@@ -10,14 +10,12 @@ namespace Rainbow.Types
     {
         public override CustomColorTypes Type => CustomColorTypes.Normal;
 
-        public NormalColor(Color frontColor, Color backColor, string colorName, string shortColorName,
-            bool hidden = false)
+        public NormalColor(Color frontColor, Color backColor, string colorName, bool hidden = false)
         {
             FrontColor = frontColor;
             BackColor = backColor;
             
             ColorName = CustomStringName.Register(colorName);
-            ShortColorName = CustomStringName.Register(shortColorName);
 
             Hidden = hidden;
         }
@@ -29,12 +27,11 @@ namespace Rainbow.Types
         
         public ColorStop[] ColorStops { get; }
 
-        public CyclicColor(ColorStop[] colorStops, string colorName, string shortColorName, bool hidden = false)
+        public CyclicColor(ColorStop[] colorStops, string colorName, bool hidden = false)
         {
             ColorStops = colorStops;
 
             ColorName = CustomStringName.Register(colorName);
-            ShortColorName = CustomStringName.Register(shortColorName);
 
             Hidden = hidden;
 
@@ -115,8 +112,7 @@ namespace Rainbow.Types
         public Color BackColor { get; protected set; }
         
         public StringNames ColorName { get; protected set; }
-        public StringNames ShortColorName { get; protected set; }
-        
+
         public bool Hidden { get; protected set; }
     }
 

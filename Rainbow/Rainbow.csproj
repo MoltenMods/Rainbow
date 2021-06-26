@@ -2,7 +2,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
         <Version>0.1.0</Version>
-        <GameVersion>2021.5.25.2</GameVersion>
+        <GameVersion>2021.6.15</GameVersion>
 
         <Description>Custom colours mod for Among Us</Description>
         <Authors>Daemon</Authors>
@@ -24,6 +24,6 @@
         
         <Reference Remove="$(AmongUs)\BepInEx\unhollowed\netstandard.dll;$(AmongUs)\BepInEx\unhollowed\Newtonsoft.Json.dll" />
         
-        <Reference Include="$(AmongUs)\BepInEx\plugins\Reactor-2021.5.25s.dll" />
+        <Reference Include="$(AmongUs)\BepInEx\plugins\Reactor.dll" />
     </ItemGroup>
 </Project>

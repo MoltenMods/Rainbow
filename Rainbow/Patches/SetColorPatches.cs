@@ -2,7 +2,6 @@
 using Rainbow.Extensions;
 using Rainbow.Net;
 using Rainbow.Types;
-using Reactor;
 using Reactor.Networking;
 using UnityEngine;
 using Object = Il2CppSystem.Object;
@@ -21,12 +20,11 @@ namespace Rainbow.Patches
                 var frontColor = Palette.PlayerColors[bodyColor];
                 var backColor = Palette.ShadowColors[bodyColor];
                 var colorName = translator.GetString(Palette.ColorNames[bodyColor], new Object[0]);
-                var shortColorName = translator.GetString(Palette.ShortColorNames[bodyColor], new Object[0]);
 
                 if (AmongUsClient.Instance.AmClient)
-                    __instance.SetCustomColor(frontColor, backColor, colorName, shortColorName);
+                    __instance.SetCustomColor(frontColor, backColor, colorName);
 
-                Rpc<SetColorRpc>.Instance.Send(new SetColorRpc.Data(frontColor, backColor, colorName, shortColorName));
+                Rpc<SetColorRpc>.Instance.Send(new SetColorRpc.Data(frontColor, backColor, colorName));
 
                 return false;
             }
@@ -53,6 +51,20 @@ namespace Rainbow.Patches
         [HarmonyPatch(typeof(PlayerTab), nameof(PlayerTab.SelectColor))]
         public static class SetHatColorPatch
         {
+            // Not sure why this patch is needed. It basically just does what the normal code does, but somehow makes
+            // the mod work properly
+            public static bool Prefix(PlayerTab __instance, [HarmonyArgument(0)] int colorId)
+            {
+                __instance.UpdateAvailableColors();
+
+                var color = (byte) colorId;
+
+                SaveManager.BodyColor = color;
+                if (PlayerControl.LocalPlayer) PlayerControl.LocalPlayer.CmdCheckColor(color);
+
+                return false;
+            }
+            
             // Because the hat in the preview doesn't change color for some reason when selecting your color
             public static void Postfix(PlayerTab __instance, [HarmonyArgument(0)] int colorId)
             {

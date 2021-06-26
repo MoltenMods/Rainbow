@@ -16,20 +16,20 @@ An Among Us mod to add extra colours.
   should check out some of their projects. I promise you won't
   regret it 😉 (they have a great plugin for Impostor which makes
   the lobby codes actual words. Pretty POG if you ask me 👀).
+- Many thanks to [SideSxope](https://github.com/amsyarasyiq) for helping fix
+  an annoying bug which caused normal RPCs to be used instead of
+  custom ones. If they hadn't found a fix, I probably would still be
+  working on trying to fix the mod 😅.
 
 ## Features
 
 - Adds new colors, including the following:
-  - Gray
   - Teal
-  - Coral
   - Olive
-  - Rose
   - Maroon
   - Gold
   - Mint
   - Lavender
-  - Tan
   - *Rainbow* 🌈
 
 ## Installation
@@ -50,6 +50,12 @@ An Among Us mod to add extra colours.
       </tr>
    </thead>
    <tbody>
+      <tr>
+        <td>0.2.0</td>
+        <td>2021.6.15</td>
+        <td><a href="https://github.com/NuclearPowered/BepInEx/releases/tag/6.0.0-reactor.23">6.0.0-reactor.23</a></td>
+        <td><a href="https://github.com/NuclearPowered/Reactor/actions/runs/946101529">1.0.0-ci.68</a></td>
+      </tr>
       <tr>
         <td>0.1.1</td>
         <td rowspan="2">2021.5.10-2021.5.25.2</td>

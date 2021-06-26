@@ -17,15 +17,13 @@ namespace Rainbow.Net
             public readonly Color32 BackColor;
 
             public readonly string ColorName;
-            public readonly string ShortColorName;
 
-            public Data(Color32 frontColor, Color32 backColor, string colorName, string shortColorName)
+            public Data(Color32 frontColor, Color32 backColor, string colorName)
             {
                 FrontColor = frontColor;
                 BackColor = backColor;
                 
                 ColorName = colorName;
-                ShortColorName = shortColorName;
             }
         }
 
@@ -44,19 +42,18 @@ namespace Rainbow.Net
             writer.Write(data.BackColor.a);
             
             writer.Write(data.ColorName);
-            writer.Write(data.ShortColorName);
         }
 
         public override Data Read(MessageReader reader)
         {
             return new Data(new Color32(reader.ReadByte(), reader.ReadByte(), reader.ReadByte(), reader.ReadByte()),
                 new Color32(reader.ReadByte(), reader.ReadByte(), reader.ReadByte(), reader.ReadByte()),
-                reader.ReadString(), reader.ReadString());
+                reader.ReadString());
         }
 
         public override void Handle(PlayerControl innerNetObject, Data data)
         {
-            innerNetObject.SetCustomColor(data.FrontColor, data.BackColor, data.ColorName, data.ShortColorName);
+            innerNetObject.SetCustomColor(data.FrontColor, data.BackColor, data.ColorName);
         }
     }
 }
