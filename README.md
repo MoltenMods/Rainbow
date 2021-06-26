@@ -1,3 +1,5 @@
+> This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC. © Innersloth LLC.
+
 # Rainbow
 
 An Among Us mod to add extra colours.
@@ -19,7 +21,9 @@ An Among Us mod to add extra colours.
 - Many thanks to [SideSxope](https://github.com/amsyarasyiq) for helping fix
   an annoying bug which caused normal RPCs to be used instead of
   custom ones. If they hadn't found a fix, I probably would still be
-  working on trying to fix the mod 😅.
+  working on trying to fix the mod 😅. They also contributed to this
+  mod at one point but I destroyed their commits when doing a force
+  push to the repo...
 
 ## Features
 
