@@ -18,7 +18,7 @@ An Among Us mod to add extra colours.
   should check out some of their projects. I promise you won't
   regret it 😉 (they have a great plugin for Impostor which makes
   the lobby codes actual words. Pretty POG if you ask me 👀).
-- Many thanks to [SideSxope](https://github.com/amsyarasyiq) for helping fix
+- Many thanks to [amsyarasyiq](https://github.com/amsyarasyiq) for helping fix
   an annoying bug which caused normal RPCs to be used instead of
   custom ones. If they hadn't found a fix, I probably would still be
   working on trying to fix the mod 😅. They also contributed to this
