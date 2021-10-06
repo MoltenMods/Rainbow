@@ -1,7 +1,9 @@
 ﻿using HarmonyLib;
+using InnerNet;
 using Rainbow.Extensions;
 using Rainbow.Net;
 using Rainbow.Types;
+using Reactor;
 using Reactor.Networking;
 using UnityEngine;
 using Object = Il2CppSystem.Object;
@@ -29,6 +31,16 @@ namespace Rainbow.Patches
                 return false;
             }
         }
+        
+        [HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.CheckColor))]
+        public static class CheckColorPatch
+        {
+            public static bool Prefix(byte bodyColor, PlayerControl __instance)
+            {
+                __instance.CmdCheckColor(bodyColor);
+                return false;
+            }
+        }
 
         [HarmonyPatch(typeof(PlayerTab), nameof(PlayerTab.UpdateAvailableColors))]
         public static class AllColorsAvailablePatch
@@ -51,20 +63,6 @@ namespace Rainbow.Patches
         [HarmonyPatch(typeof(PlayerTab), nameof(PlayerTab.SelectColor))]
         public static class SetHatColorPatch
         {
-            // Not sure why this patch is needed. It basically just does what the normal code does, but somehow makes
-            // the mod work properly
-            public static bool Prefix(PlayerTab __instance, [HarmonyArgument(0)] int colorId)
-            {
-                __instance.UpdateAvailableColors();
-
-                var color = (byte) colorId;
-
-                SaveManager.BodyColor = color;
-                if (PlayerControl.LocalPlayer) PlayerControl.LocalPlayer.CmdCheckColor(color);
-
-                return false;
-            }
-            
             // Because the hat in the preview doesn't change color for some reason when selecting your color
             public static void Postfix(PlayerTab __instance, [HarmonyArgument(0)] int colorId)
             {
